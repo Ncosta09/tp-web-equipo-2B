@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominios", "Dominios\Dominios.csproj", "{FA41830A-3A92-4B00-B326-70F65B46F768}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocios", "Negocios\Negocios.csproj", "{8F2893D7-6997-40A4-BDBF-0F9F9104D3CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA41830A-3A92-4B00-B326-70F65B46F768} = {FA41830A-3A92-4B00-B326-70F65B46F768}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
