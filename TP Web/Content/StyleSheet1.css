@@ -1,0 +1,132 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b1d0e0; /* Fondo claro */
+}
+
+.header {
+    background-color: #1a374d; /* Color oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #1a374d; /* Color oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+    min-height: 80vh; /* Para mantener la estructura */
+}
+
+.voucher-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+    .voucher-input input {
+        padding: 10px;
+        font-size: 18px;
+        border: 2px solid #6998ab; /* Color intermedio */
+        border-radius: 5px;
+    }
+
+    .voucher-input button {
+        background-color: #406882; /* Color de botón */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+        .voucher-input button:hover {
+            background-color: #1a374d; /* Color más oscuro al pasar el mouse */
+        }
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #6998ab;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+    .input-group label {
+        flex-basis: 100%;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #6998ab;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+        .input-group input:last-child {
+            margin-right: 0;
+        }
+
+.search-btn {
+    background-color: #406882;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #1a374d;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-register {
+    background-color: #406882;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
