@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP Web", "TP Web\TP Web.csproj", "{88D21C14-E595-4068-A4FA-5DC7B861366F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F2893D7-6997-40A4-BDBF-0F9F9104D3CF} = {8F2893D7-6997-40A4-BDBF-0F9F9104D3CF}
+		{FA41830A-3A92-4B00-B326-70F65B46F768} = {FA41830A-3A92-4B00-B326-70F65B46F768}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominios", "Dominios\Dominios.csproj", "{FA41830A-3A92-4B00-B326-70F65B46F768}"
 EndProject
