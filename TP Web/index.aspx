@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TP_Web.WebForm2" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="HeaderContent" runat="server">
-</asp:Content>
+
+<%--<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+</asp:Content>--%>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
     <section class="section-voucher">
@@ -15,6 +15,4 @@
             
           </div>
   </section>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>

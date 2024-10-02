@@ -67,8 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Dominio.dll" />
+    <Content Include="bin\Dominio.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Negocio.dll" />
+    <Content Include="bin\Negocio.pdb" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -110,6 +114,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\TP Web.dll" />
     <Content Include="bin\TP Web.pdb" />
+    <Content Include="Content\StyleMaster.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StyleSheetIndex.css" />
     <Content Include="Content\StyleSheetsProduct.css" />
@@ -121,6 +126,7 @@
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="DetalleProducto.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListaProductos.aspx.cs">
@@ -153,6 +159,13 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetalleProducto.aspx.cs">
+      <DependentUpon>DetalleProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleProducto.aspx.designer.cs">
+      <DependentUpon>DetalleProducto.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\roslyn\csc.exe.config" />
@@ -170,6 +183,7 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\TP Web.csproj.AssemblyReference.cache" />
     <Content Include="obj\Debug\TP Web.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TP Web.csproj.Up2Date" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
