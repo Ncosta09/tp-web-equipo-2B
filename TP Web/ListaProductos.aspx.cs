@@ -18,6 +18,12 @@ namespace TP_Web
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             ListaArticulo = negocio.listarConSp();
+
+            if (!IsPostBack)
+            {
+                artRepeater.DataSource = ListaArticulo;
+                artRepeater.DataBind();
+            }
         }
     }
 }

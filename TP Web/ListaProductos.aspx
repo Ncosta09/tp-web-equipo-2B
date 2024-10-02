@@ -2,26 +2,21 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="HeaderContent" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
 <div class="container-fila">
-    <%
-        foreach (Dominio.Articulo art in ListaArticulo)
-        {
-            %>
-            <div class="col-product">
-                <img src="<%= art.Imagen.imgUrl %>" />
+
+    <asp:Repeater runat="server" ID="artRepeater">
+        <ItemTemplate>
+            <a href="" class="col-product"> 
+                <img src="<%#Eval("Imagen")%>" />
                 <div class="line"></div>
-                <label><%= art.Nombre %></label>
+                <label><%#Eval("Nombre")%></label>
                 <asp:Button CssClass="btnPremio" runat="server" Text="Quiero este!" />
-            </div>
-            <%
-        }
-    %>
+            </a>
+        </ItemTemplate>
+    </asp:Repeater>
 </div>
 
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>
