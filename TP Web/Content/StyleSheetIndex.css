@@ -1,0 +1,44 @@
+﻿/*body {
+
+}*/
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.col-lbl {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.col-voucher {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lblVoucher{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: left;
+}
+
+.tbxVoucher {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+}
+
+.btnVoucher {
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: #6998AB;
+}
+

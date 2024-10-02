@@ -111,12 +111,14 @@
     <Content Include="bin\TP Web.dll" />
     <Content Include="bin\TP Web.pdb" />
     <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\StyleSheetIndex.css" />
     <Content Include="obj\Debug\TP Web.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TP Web.dll" />
     <Content Include="obj\Debug\TP Web.pdb" />
+    <Content Include="Resources\search_icon.png" />
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />
-    <Content Include="index.aspx" />
+    <Content Include="Index.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
@@ -135,12 +137,12 @@
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +176,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominios\Dominios.csproj">
+      <Project>{fa41830a-3a92-4b00-b326-70f65b46f768}</Project>
+      <Name>Dominios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{8f2893d7-6997-40a4-bdbf-0f9f9104d3cf}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
