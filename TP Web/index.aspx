@@ -11,7 +11,7 @@
           </div>
           <div class="col-voucher">
                 <asp:TextBox CssClass="tbxVoucher" ID="tbxVoucher" runat="server" placeholder="XXXXXXXX"></asp:TextBox>
-                <asp:ImageButton CssClass="btnVoucher" ID="btnVoucher" runat="server" ImageUrl="~/Resources/search_icon.png" />
+                <asp:ImageButton CssClass="btnVoucher" ID="btnVoucher" runat="server" ImageUrl="~/Resources/search_icon.png" OnClick="btnVoucher_Click"  />
             
           </div>
   </section>

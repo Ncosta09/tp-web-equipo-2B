@@ -13,5 +13,10 @@ namespace TP_Web
         {
 
         }
+
+        protected void btnVoucher_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("ListaProductos.aspx");
+        }
     }
 }
