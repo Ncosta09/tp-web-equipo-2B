@@ -19,6 +19,8 @@
             </div>
             <ul class="navbar-links">
                 <li><a runat="server" href="~/Index.aspx">Home</a></li>
+                <%--Habilitar en caso que el voucher este ok ¬ --%>
+                <li><a runat="server" href="~/ListaProductos.aspx">Productos</a></li>
             </ul>
         </nav>
 

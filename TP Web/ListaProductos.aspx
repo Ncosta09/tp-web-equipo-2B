@@ -4,19 +4,22 @@
 </asp:Content>--%>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container-fila">
+        <asp:Repeater runat="server" ID="artRepeater">
+            <ItemTemplate>
+                <div class="col-product">
 
-<div class="container-fila">
+                    <!-- Redirigir al detalle del producto -->
+                    <asp:HyperLink runat="server" NavigateUrl='<%# Eval("ID", "DetalleProducto.aspx?id={0}") %>' class="product-link">
+                        <img src="<%# Eval("Imagen") %>" alt="Producto" />
+                        <div class="line"></div>
+                        <label><%# Eval("Nombre") %></label>
+                    </asp:HyperLink>
 
-    <asp:Repeater runat="server" ID="artRepeater">
-        <ItemTemplate>
-            <a href="" class="col-product"> 
-                <img src="<%#Eval("Imagen")%>" />
-                <div class="line"></div>
-                <label><%#Eval("Nombre")%></label>
-                <asp:Button CssClass="btnPremio" runat="server" Text="Quiero este!" />
-            </a>
-        </ItemTemplate>
-    </asp:Repeater>
-</div>
-
+                    <!-- Button -->
+                    <asp:Button CssClass="btnPremio" runat="server" Text="Quiero este!" />
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 </asp:Content>

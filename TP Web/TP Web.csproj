@@ -118,6 +118,7 @@
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StyleSheetIndex.css" />
     <Content Include="Content\StyleSheetsProduct.css" />
+    <Content Include="DetalleProducto.aspx" />
     <Content Include="ListaProductos.aspx" />
     <Content Include="obj\Debug\TP Web.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TP Web.dll" />
@@ -126,9 +127,15 @@
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />
     <Content Include="Index.aspx" />
-    <Content Include="DetalleProducto.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleProducto.aspx.cs">
+      <DependentUpon>DetalleProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleProducto.aspx.designer.cs">
+      <DependentUpon>DetalleProducto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListaProductos.aspx.cs">
       <DependentUpon>ListaProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,13 +165,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleProducto.aspx.cs">
-      <DependentUpon>DetalleProducto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DetalleProducto.aspx.designer.cs">
-      <DependentUpon>DetalleProducto.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -31,18 +31,22 @@
     text-decoration: none;
 }
 
-    .col-product img {
-        width: 305px;
-        height: 300px;
-        object-fit: contain;
-        margin-bottom: 15px;
-        background-color: #FFF;
-    }
+.product-link{
+    text-decoration: none;
+}
 
-    .col-product label {
-        cursor: pointer;
-        color: black;
-    }
+.col-product img {
+    width: 305px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    background-color: #FFF;
+}
+
+.col-product label {
+    cursor: pointer;
+    color: black;
+}
 
 .btnPremio {
     color: #fff;
