@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominios
+namespace Dominio
 {
-    internal class Voucher
+    public class Voucher
     {
-        
         public int CodigoVoucher { get; set; }
         public int IdCliente { get; set; }
         public DateTime FechaCanje { get; set; }
         public int IdArticulo { get; set; }
-
     }
 }

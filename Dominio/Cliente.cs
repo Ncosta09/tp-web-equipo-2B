@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominios
+namespace Dominio
 {
-    public class Clientes
+    public class Cliente
     {
-   
         public int Id { get; set; }
         public int Documento { get; set; }
         public string Apellido { get; set; }
@@ -17,8 +16,5 @@ namespace Dominios
         public int Direccion { get; set; }
         public string Ciudad { get; set; }
         public int CP { get; set; }
-
-
-
     }
 }

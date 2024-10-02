@@ -112,6 +112,8 @@
     <Content Include="bin\TP Web.pdb" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StyleSheetIndex.css" />
+    <Content Include="Content\StyleSheetsProduct.css" />
+    <Content Include="ListaProductos.aspx" />
     <Content Include="obj\Debug\TP Web.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TP Web.dll" />
     <Content Include="obj\Debug\TP Web.pdb" />
@@ -121,6 +123,13 @@
     <Content Include="Index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListaProductos.aspx.cs">
+      <DependentUpon>ListaProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaProductos.aspx.designer.cs">
+      <DependentUpon>ListaProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
@@ -178,13 +187,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dominios\Dominios.csproj">
-      <Project>{fa41830a-3a92-4b00-b326-70f65b46f768}</Project>
-      <Name>Dominios</Name>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{0478cf86-1870-4df4-b879-e2323219f131}</Project>
+      <Name>Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Negocios\Negocios.csproj">
-      <Project>{8f2893d7-6997-40a4-bdbf-0f9f9104d3cf}</Project>
-      <Name>Negocios</Name>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{78e6d412-1f04-4472-994d-8363bde324f8}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

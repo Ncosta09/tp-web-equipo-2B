@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominios
+namespace Dominio
 {
-    public class Marca
+    public class Imagen
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
-
+        public string imgUrl { get; set; }
 
         public override string ToString()
         {
-            return Descripcion;
+            return imgUrl;
         }
-
     }
 }

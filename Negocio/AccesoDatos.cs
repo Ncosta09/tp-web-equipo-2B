@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
-namespace Negocios
+namespace Negocio
 {
-    public class AccessoDatos
+    public class AccesoDatos
     {
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
 
-
         public SqlDataReader Lector
         {
             get { return lector; }
         }
-        public AccessoDatos()
-        {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=PROMOS_DB; integrated security=true");
-            comando = new SqlCommand();
 
+        public AccesoDatos()
+        {
+            conexion = new SqlConnection("server = .\\SQLEXPRESS; database = PROMOS_DB; integrated security = true");
+            comando = new SqlCommand();
         }
-        public void setearConsulta(string consulta)
+
+        public void setConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
-
         }
 
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
+
             try
             {
                 conexion.Open();
@@ -41,14 +41,14 @@ namespace Negocios
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
+
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
+
             try
             {
                 conexion.Open();
@@ -60,18 +60,18 @@ namespace Negocios
             }
         }
 
-        public void setearParametro(string nombre, object valor)
+        public void setParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void cerrarConexion()
         {
-            if (lector != null)
+            if (lector != null){
                 lector.Close();
-            conexion.Close();
+                conexion.Close();
+            }
+
         }
-
-
     }
 }
