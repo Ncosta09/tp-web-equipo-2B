@@ -26,11 +26,17 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
 
-        <div class="footer">
-            <div>
-                © Grupo 2B
+        <footer class="footer">
+            <div class="footer-text">
+                <p>© Grupo 2B</p>
             </div>
-        </div>
+            <ul class="footer-links">
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+                <li>Contact Us</li>
+            </ul>
+        </footer>
+
     </form>
 </body>
 </html>
