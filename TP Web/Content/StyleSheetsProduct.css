@@ -29,8 +29,13 @@
     height: 450px;
     width: 350px;
     text-decoration: none;
+    transition: .3s;
 }
 
+    .col-product:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
 .product-link{
     text-decoration: none;
 }
