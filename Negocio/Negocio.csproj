@@ -44,6 +44,7 @@
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="ArticuloPorId.cs" />
+    <Compile Include="BuscarVoucher.cs" />
     <Compile Include="ClienteParticipacion.cs" />
     <Compile Include="ClientePorDni.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
