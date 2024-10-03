@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    internal class ParticipacionCliente
+    public class ParticipacionCliente
     {
         public bool GuardarParticipacion(int clienteId, int articuloId)
         {

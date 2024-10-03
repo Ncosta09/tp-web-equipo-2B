@@ -9,12 +9,12 @@ namespace Dominio
     public class Cliente
     {
         public int Id { get; set; }
-        public int Documento { get; set; }
+        public string Documento { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
         public string Email { get; set; }
-        public int Direccion { get; set; }
+        public Int32 Direccion { get; set; }
         public string Ciudad { get; set; }
-        public int CP { get; set; }
+        public string CP { get; set; }
     }
 }

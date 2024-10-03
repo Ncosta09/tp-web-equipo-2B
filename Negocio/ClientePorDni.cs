@@ -24,13 +24,13 @@ namespace Negocio
                     Cliente cliente = new Cliente
                     {
                         Id = (int)datos.Lector["Id"],
-                        Documento = (int)datos.Lector["Documento"],
+                        Documento = (string)datos.Lector["Documento"],
                         Nombre = (string)datos.Lector["Nombre"],
                         Apellido = (string)datos.Lector["Apellido"],
                         Email = (string)datos.Lector["Email"],
-                        Direccion = (int)datos.Lector["Direccion"],
+                        Direccion = (Int32)datos.Lector["Direccion"],
                         Ciudad = (string)datos.Lector["Ciudad"],
-                        CP = (int)datos.Lector["CP"]
+                        CP = (string)datos.Lector["CP"]
                     };
 
                     return cliente;

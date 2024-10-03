@@ -6,42 +6,41 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Registro</h2>
     <div class="form-container">
-        <form>
-            <div class="input-group">
-                <label for="documento">Documento</label>
-                <input type="text" id="documento" placeholder="Documento" />
-                <button type="button" class="search-btn">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-            
-            <div class="input-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Nombre" />
-                <input type="text" id="apellido" placeholder="Apellido" />
-            </div>
+        <div class="input-group">
+            <label for="txtDocumento">Documento</label>
+            <asp:TextBox ID="txtDocumento" runat="server" placeholder="Documento" CssClass="form-control" />
+            <asp:Button ID="btnBuscarDocumento" runat="server" CssClass="search-btn" Text="Buscar" OnClick="btnBuscarDocumento_Click" />
+        </div>
 
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email" />
-            </div>
+        <div class="input-group">
+            <label for="txtNombre">Nombre</label>
+            <asp:TextBox ID="txtNombre" runat="server" placeholder="Nombre" CssClass="form-control" />
+            <asp:TextBox ID="txtApellido" runat="server" placeholder="Apellido" CssClass="form-control" />
+        </div>
 
-            <div class="input-group">
-                <label for="direccion">Dirección</label>
-                <input type="text" id="direccion" placeholder="Dirección" />
-            </div>
+        <div class="input-group">
+            <label for="txtEmail">Email</label>
+            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control" />
+        </div>
 
-            <div class="input-group">
-                <label for="ciudad">Ciudad</label>
-                <input type="text" id="ciudad" placeholder="Ciudad" />
-                <input type="text" id="cp" placeholder="CP" />
-            </div>
+        <div class="input-group">
+            <label for="txtDireccion">Dirección</label>
+            <asp:TextBox ID="txtDireccion" runat="server" placeholder="Dirección" CssClass="form-control" />
+        </div>
 
-            <div class="button-group">
-                <button type="submit" class="btn btn-primary">Participar</button>
-                <button type="button" class="btn btn-secondary">Cancelar</button>
-                <button type="submit" class="btn btn-register">Regístrate y Participa</button>
-            </div>
-        </form>
+        <div class="input-group">
+            <label for="txtCiudad">Ciudad</label>
+            <asp:TextBox ID="txtCiudad" runat="server" placeholder="Ciudad" CssClass="form-control" />
+            <asp:TextBox ID="txtCP" runat="server" placeholder="CP" CssClass="form-control" />
+        </div>
+
+        <div class="button-group">
+            <asp:Button ID="btnParticipar" runat="server" Text="Participar" CssClass="btn btn-primary" OnClick="btnParticipar_Click" Enabled="false" />
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
+            <asp:Button ID="btnRegistrateParticipa" runat="server" Text="Regístrate y Participa" CssClass="btn btn-register" OnClick="btnRegistrateParticipa_Click" />
+        </div>
+
+        <!-- Label para mostrar mensajes de error o éxito -->
+        <asp:Label ID="lblMensaje" runat="server" CssClass="alert alert-info" Visible="false" />
     </div>
 </asp:Content>
