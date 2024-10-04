@@ -17,7 +17,7 @@
                     </asp:HyperLink>
 
                     <!-- Button -->
-                    <asp:Button CssClass="btnPremio" runat="server" Text="Quiero este!" />
+                    <asp:Button CssClass="btnPremio" runat="server" Text="Quiero este!" OnClick="btnSeleccionarProducto_Click" CommandArgument='<%# Eval("ID") %>' />
                 </div>
             </ItemTemplate>
         </asp:Repeater>

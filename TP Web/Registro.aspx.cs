@@ -18,8 +18,6 @@ namespace TP_Web
                     // Si es la primera carga de la página, no hacer nada
                 }
             }
-
-            // Evento que se dispara cuando el usuario ingresa el documento
             protected void btnBuscarDocumento_Click(object sender, EventArgs e)
             {
                 string documento = txtDocumento.Text;
@@ -31,33 +29,29 @@ namespace TP_Web
 
                     if (cliente != null)
                     {
-                        // Cliente existente: autocompletar campos
+                        // autocompleta campos si ya existe
                         txtNombre.Text = cliente.Nombre;
                         txtApellido.Text = cliente.Apellido;
                         txtEmail.Text = cliente.Email;
                         txtDireccion.Text = cliente.Direccion.ToString();
                         txtCiudad.Text = cliente.Ciudad;
                         txtCP.Text = cliente.CP.ToString();
-
-                        // Habilitar el botón "Participar" y deshabilitar "Registrar y Participar"
                         btnParticipar.Enabled = true;
                         btnRegistrateParticipa.Enabled = false;
                     }
                     else
                     {
-                        // Cliente nuevo: habilitar todos los campos para completar
                         btnParticipar.Enabled = false;
                         btnRegistrateParticipa.Enabled = true;
                     }
                 }
                 else
-                {
-                    // Mostrar mensaje de error si el documento está vacío
+                { 
                     lblMensaje.Text = "Por favor, ingrese un documento válido.";
                 }
             }
 
-            // Evento para el botón "Participar" (para clientes existentes)
+            // clientes existentes
             protected void btnParticipar_Click(object sender, EventArgs e)
             {
                 try
@@ -74,7 +68,7 @@ namespace TP_Web
 
                         if (exito)
                         {
-                            // Participación registrada correctamente
+                           
                             Response.Redirect("Exito.aspx");
                         }
                         else
@@ -89,14 +83,14 @@ namespace TP_Web
                 }
             }
 
-            // Evento para el botón "Registrate y Participa" (para nuevos clientes)
-            protected void btnRegistrateParticipa_Click(object sender, EventArgs e)
+        //  clientes nuevos
+        protected void btnRegistrateParticipa_Click(object sender, EventArgs e)
             {
                 if (ValidarCampos())
                 {
                     try
                     {
-                        // Crear nuevo cliente
+                       
                         Cliente cliente = new Cliente
                         {
                             Documento = txtDocumento.Text,
@@ -113,7 +107,7 @@ namespace TP_Web
 
                         if (clienteRegistrado)
                         {
-                            // Guardar participación del nuevo cliente
+                          
                             ParticipacionCliente participacion = new ParticipacionCliente();
                             bool exito = participacion.GuardarParticipacion(cliente.Id, ObtenerArticuloId());
 
@@ -142,7 +136,7 @@ namespace TP_Web
                 }
             }
 
-            // Función para validar los campos del formulario
+            // validar los campos 
             private bool ValidarCampos()
             {
                 if (string.IsNullOrEmpty(txtDocumento.Text) ||
@@ -168,13 +162,22 @@ namespace TP_Web
                 }
             }
 
-        
-            private int ObtenerArticuloId()
+
+        private int ObtenerArticuloId()
+        {
+            
+            if (Session["ArticuloSeleccionado"] != null)
             {
-                // Esta función debe retornar el Id del artículo que el cliente está seleccionando.
-                // Se debe implementar la lógica correspondiente.
-                return 1;
+               
+                return (int)Session["ArticuloSeleccionado"];
+            }
+            else
+            {
+                
+                lblMensaje.Text = "No se ha seleccionado un artículo.";
+                return 0;  
             }
         }
+    }
     }
 
