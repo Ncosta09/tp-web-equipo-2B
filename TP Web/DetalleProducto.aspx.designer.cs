@@ -15,6 +15,15 @@ namespace TP_Web
     {
 
         /// <summary>
+        /// sliderWrapper control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal sliderWrapper;
+
+        /// <summary>
         /// lblNombre control.
         /// </summary>
         /// <remarks>
@@ -22,33 +31,6 @@ namespace TP_Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNombre;
-
-        /// <summary>
-        /// lblDescripcion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescripcion;
-
-        /// <summary>
-        /// lblPrecio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecio;
-
-        /// <summary>
-        /// lblMarca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMarca;
 
         /// <summary>
         /// lblCategoria control.
@@ -60,12 +42,39 @@ namespace TP_Web
         protected global::System.Web.UI.WebControls.Label lblCategoria;
 
         /// <summary>
-        /// sliderWrapper control.
+        /// lblMarca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal sliderWrapper;
+        protected global::System.Web.UI.WebControls.Label lblMarca;
+
+        /// <summary>
+        /// lblPrecio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrecio;
+
+        /// <summary>
+        /// lblDescripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDescripcion;
+
+        /// <summary>
+        /// btnAddToCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddToCart;
     }
 }
