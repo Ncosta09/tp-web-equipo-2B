@@ -6,12 +6,18 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+    <%--CSS--%>
     <link href="~/Content/StyleMaster.css" rel="stylesheet" />
     <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
     <link href="~/Content/StyleSheetIndex.css" rel="stylesheet" />
     <link href="~/Content/StyleSheetsProduct.css" rel="stylesheet" />
-     <link href="~/Content/StylesheetCliente.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="~/Content/StylesheetCliente.css" rel="stylesheet" />
+    <link href="~/Content/StyleDetalleProducto.css" rel="stylesheet" />
+
+    <%--SCRIPTS--%>
+    <script src="Script_JS/DetalleProducto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script type="text/javascript">
         function lanzarConfetti() {
             confetti(); 

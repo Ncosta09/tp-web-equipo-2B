@@ -114,6 +114,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\TP Web.dll" />
     <Content Include="bin\TP Web.pdb" />
+    <Content Include="Content\StyleDetalleProducto.css" />
     <Content Include="Content\StyleMaster.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\StylesheetCliente.css" />
@@ -125,6 +126,7 @@
     <Content Include="obj\Debug\TP Web.dll" />
     <Content Include="obj\Debug\TP Web.pdb" />
     <Content Include="Resources\search_icon.png" />
+    <Content Include="Script_JS\DetalleProducto.js" />
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />
     <Content Include="Index.aspx" />
@@ -204,7 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Script\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -49,7 +49,6 @@ namespace Negocio
                     lista.Add(art);
                 }
 
-
                 return lista;
             }
             catch (Exception ex)

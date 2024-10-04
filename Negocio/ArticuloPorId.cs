@@ -17,36 +17,40 @@ namespace Negocio
             try
             {
                 //Consulta a la DB ¬
-                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca AS MarId, A.IdCategoria AS CatId, A.Precio, MIN(IMG.ImagenUrl) AS ImagenUrl FROM ARTICULOS AS A INNER JOIN IMAGENES AS IMG ON IMG.IdArticulo = A.Id WHERE A.Id = @Id GROUP BY A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio;");
+                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, IMG.ImagenUrl AS ImagenUrl FROM ARTICULOS AS A INNER JOIN IMAGENES AS IMG ON IMG.IdArticulo = A.Id INNER JOIN MARCAS AS M ON M.Id = A.IdMarca INNER JOIN CATEGORIAS AS C ON C.Id = A.IdCategoria WHERE A.Id = @Id GROUP BY A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion, C.Descripcion, A.Precio, IMG.ImagenUrl");
                 datos.setParametro("@Id", id);
                 datos.ejecutarLectura();
 
+                art = new Articulo();
+                art.Imagenes = new List<Imagen>();
+
+
                 while (datos.Lector.Read())
                 {
-                    art = new Articulo();
+                    if (art.ID == 0)
+                    {
+                        art.ID = (int)datos.Lector["Id"];
+                        art.Codigo = datos.Lector["Codigo"] is DBNull ? "Sin Codigo" : (string)datos.Lector["Codigo"];
+                        art.Nombre = datos.Lector["Nombre"] is DBNull ? "Sin Nombre" : (string)datos.Lector["Nombre"];
+                        art.Descripcion = datos.Lector["Descripcion"] is DBNull ? "Sin Descripcion" : (string)datos.Lector["Descripcion"];
+                        art.Precio = datos.Lector["Precio"] is DBNull ? 0 : (decimal)datos.Lector["Precio"];
 
-                    art.ID = (int)datos.Lector["Id"];
-                    art.Codigo = datos.Lector["Codigo"] is DBNull ? "Sin Codigo" : (string)datos.Lector["Codigo"];
-                    art.Nombre = datos.Lector["Nombre"] is DBNull ? "Sin Nombre" : (string)datos.Lector["Nombre"];
-                    art.Descripcion = datos.Lector["Descripcion"] is DBNull ? "Sin Descripcion" : (string)datos.Lector["Descripcion"];
-                    art.Precio = datos.Lector["Precio"] is DBNull ? 0 : (decimal)datos.Lector["Precio"];
+                        // Categoría
+                        art.Categoria = new Categoria();
+                        art.Categoria.Descripcion = datos.Lector["Categoria"] is DBNull ? "Sin Categoria" : (string)datos.Lector["Categoria"];
 
-                    // Categoría
-                    art.Categoria = new Categoria();
-                    art.Categoria.Id = datos.Lector["CatId"] is DBNull ? 0 : (int)datos.Lector["CatId"];
-                    art.Categoria.Descripcion = art.Categoria.Id == 0 ? "Sin Categoria" : "Categoria";
-
-                    // Marca
-                    art.Marca = new Marca();
-                    art.Marca.Id = datos.Lector["MarId"] is DBNull ? 0 : (int)datos.Lector["MarId"];
-                    art.Marca.Descripcion = art.Marca.Id == 0 ? "Sin Marca" : "Marca";
+                        // Marca
+                        art.Marca = new Marca();
+                        art.Marca.Descripcion = datos.Lector["Marca"] is DBNull ? "Sin Marca" : (string)datos.Lector["Marca"];
+                    }
 
                     // Imagen
-                    art.Imagen = new Imagen();
-                    art.Imagen.imgUrl = datos.Lector["ImagenUrl"] is DBNull ? "Sin Imagen" : (string)datos.Lector["ImagenUrl"];
-                
+                    Imagen img = new Imagen();
+                    img.imgUrl = datos.Lector["ImagenUrl"] is DBNull ? "Sin Imagen" : (string)datos.Lector["ImagenUrl"];
+                    art.Imagenes.Add(img);
+
                 }
-                
+
                 return art;
             }
             catch (Exception ex)
@@ -58,7 +62,6 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-
         }
     }
 }

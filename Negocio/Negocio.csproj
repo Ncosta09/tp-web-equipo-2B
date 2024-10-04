@@ -47,6 +47,7 @@
     <Compile Include="BuscarVoucher.cs" />
     <Compile Include="ClienteParticipacion.cs" />
     <Compile Include="ClientePorDni.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarCliente.cs" />
   </ItemGroup>
@@ -55,6 +56,24 @@
       <Project>{0478cf86-1870-4df4-b879-e2323219f131}</Project>
       <Name>Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Dominio.dll" />
+    <Content Include="bin\Debug\Dominio.pdb" />
+    <Content Include="bin\Debug\Negocio.dll" />
+    <Content Include="bin\Debug\Negocio.pdb" />
+    <Content Include="obj\Debug\Negocio.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Negocio.dll" />
+    <Content Include="obj\Debug\Negocio.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Negocio.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Negocio.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Negocio.csproj.Up2Date" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
