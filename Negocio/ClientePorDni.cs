@@ -28,9 +28,9 @@ namespace Negocio
                         Nombre = (string)datos.Lector["Nombre"],
                         Apellido = (string)datos.Lector["Apellido"],
                         Email = (string)datos.Lector["Email"],
-                        Direccion = (Int32)datos.Lector["Direccion"],
+                        Direccion = (string)datos.Lector["Direccion"],
                         Ciudad = (string)datos.Lector["Ciudad"],
-                        CP = (string)datos.Lector["CP"]
+                        CP = datos.Lector["CP"].ToString() 
                     };
 
                     return cliente;

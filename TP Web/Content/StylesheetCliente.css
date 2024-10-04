@@ -1,0 +1,72 @@
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .input-group label {
+        width: 120px; /* Ajusta el ancho para que todos los labels estén alineados */
+        text-align: left;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .input-group .form-control {
+        flex-grow: 1;
+    }
+
+        .input-group .form-control + .form-control {
+            margin-left: 10px;
+        }
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-btn {
+    margin-left: 10px;
+}
+
+.exito-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.exito-content {
+    background-color: #f8f9fa; /* Fondo suave */
+    border: 1px solid #dee2e6;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+    .exito-content h1 {
+        color: #28a745; /* Verde de éxito */
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .exito-content p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: 15px;
+    }
+
+.button-group {
+    margin-top: 30px;
+}
+
+    .button-group .btn {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }

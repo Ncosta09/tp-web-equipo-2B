@@ -103,7 +103,7 @@ namespace TP_Web
                             Nombre = txtNombre.Text,
                             Apellido = txtApellido.Text,
                             Email = txtEmail.Text,
-                            Direccion = int.Parse(txtDireccion.Text),
+                            Direccion = txtDireccion.Text,
                             Ciudad = txtCiudad.Text,
                             CP = txtCP.Text
                         };
@@ -117,12 +117,11 @@ namespace TP_Web
                             ParticipacionCliente participacion = new ParticipacionCliente();
                             bool exito = participacion.GuardarParticipacion(cliente.Id, ObtenerArticuloId());
 
-                            if (exito)
-                            {
-                                // Redirigir a la página de éxito
-                                Response.Redirect("Exito.aspx");
-                            }
-                            else
+                        if (exito)
+                        {
+                            Response.Redirect("Exito.aspx");
+                        }
+                        else
                             {
                                 lblMensaje.Text = "Ocurrió un error al registrar su participación.";
                             }

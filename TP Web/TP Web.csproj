@@ -116,6 +116,7 @@
     <Content Include="bin\TP Web.pdb" />
     <Content Include="Content\StyleMaster.css" />
     <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\StylesheetCliente.css" />
     <Content Include="Content\StyleSheetIndex.css" />
     <Content Include="Content\StyleSheetsProduct.css" />
     <Content Include="DetalleProducto.aspx" />
@@ -127,6 +128,7 @@
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="Exito.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetalleProducto.aspx.cs">
@@ -165,6 +167,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exito.aspx.cs">
+      <DependentUpon>Exito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exito.aspx.designer.cs">
+      <DependentUpon>Exito.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

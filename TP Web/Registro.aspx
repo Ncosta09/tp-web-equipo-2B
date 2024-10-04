@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Registro</h2>
+
     <div class="form-container">
         <div class="input-group">
             <label for="txtDocumento">Documento</label>
