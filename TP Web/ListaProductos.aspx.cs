@@ -23,6 +23,7 @@ namespace TP_Web
             {
                 artRepeater.DataSource = ListaArticulo;
                 artRepeater.DataBind();
+                
             }
         }
 
@@ -30,7 +31,7 @@ namespace TP_Web
         {
           
             Button btn = (Button)sender;
-
+            Response.Redirect("Registro.aspx");
             // Obtengo el ID del artículo desde el CommandArgument
             int articuloId = int.Parse(btn.CommandArgument);
 

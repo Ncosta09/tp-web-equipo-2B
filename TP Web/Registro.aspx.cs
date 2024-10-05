@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace TP_Web
 {
-        public partial class WebForm1 : System.Web.UI.Page
+        public partial class Registro : System.Web.UI.Page
         {
             protected void Page_Load(object sender, EventArgs e)
             {

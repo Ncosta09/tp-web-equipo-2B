@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Registro Exitoso" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Exito.aspx.cs" Inherits="TP_Web.WebForm3" %>
+﻿<%@ Page Title="Registro Exitoso" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Exito.aspx.cs" Inherits="TP_Web.Exito" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Registro Exitoso

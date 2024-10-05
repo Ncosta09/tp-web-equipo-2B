@@ -11,7 +11,7 @@ namespace TP_Web
 {
 
 
-    public partial class WebForm1
+    public partial class Registro
     {
 
         /// <summary>
