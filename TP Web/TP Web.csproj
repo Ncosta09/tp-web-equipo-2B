@@ -126,6 +126,7 @@
     <Content Include="obj\Debug\TP Web.dll" />
     <Content Include="obj\Debug\TP Web.pdb" />
     <Content Include="Resources\search_icon.png" />
+    <Content Include="Script_JS\Confetti.js" />
     <Content Include="Script_JS\DetalleProducto.js" />
     <Content Include="Web.config" />
     <Content Include="Registro.aspx" />

@@ -17,12 +17,8 @@
 
     <%--SCRIPTS--%>
     <script src="Script_JS/DetalleProducto.js"></script>
+    <script src="Script_JS/Confetti.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script type="text/javascript">
-        function lanzarConfetti() {
-            confetti(); 
-        }
-        </script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -33,8 +29,14 @@
             </div>
             <ul class="navbar-links">
                 <li><a runat="server" href="~/Index.aspx">Home</a></li>
-                <%--Habilitar en caso que el voucher este ok ¬ --%>
-                <li><a runat="server" href="~/ListaProductos.aspx">Productos</a></li>
+               <% if (!IsPostBack)
+            {
+    if (Session["VoucherValido"] != null && (bool)Session["VoucherValido"]) 
+            {%>
+                 <li><a runat="server" href="~/ListaProductos.aspx">Productos</a></li>      
+          <%   }
+            }%> 
+                
             </ul>
         </nav>
 

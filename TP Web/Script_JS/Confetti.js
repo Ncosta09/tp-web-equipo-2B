@@ -1,0 +1,3 @@
+﻿function lanzarConfetti() {
+    confetti();
+}
