@@ -125,6 +125,7 @@
     <Content Include="obj\Debug\TP Web.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TP Web.dll" />
     <Content Include="obj\Debug\TP Web.pdb" />
+    <Content Include="Resources\1814103_click_finger_touch_icon.png" />
     <Content Include="Resources\search_icon.png" />
     <Content Include="Script_JS\Confetti.js" />
     <Content Include="Script_JS\DetalleProducto.js" />
