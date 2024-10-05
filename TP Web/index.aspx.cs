@@ -9,9 +9,9 @@ namespace TP_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
             Session["VoucherValido"] = null;
-          
+
         }
 
         protected void btnVoucher_Click(object sender, ImageClickEventArgs e)
@@ -21,6 +21,7 @@ namespace TP_Web
 
             try
             {
+                Session["VoucherCode"] = voucherCode;//me llevo el VOUCHER
                 Voucher voucherEncontrado = buscador.encontrarVoucher(voucherCode); //BUSCO VOUCHER
 
                 if (voucherEncontrado != null)

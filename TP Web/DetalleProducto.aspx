@@ -44,8 +44,10 @@
                 <asp:Label ID="lblDescripcion" runat="server"></asp:Label>
             </p>
             <div class="button-container">
-                <asp:Button ID="btnAddToCart" runat="server" Text="Quiero este!" CssClass="add-to-cart-btn" />
-            </div>
+
+            <asp:Button CssClass="add-to-cart-btn" runat="server" Text="Quiero este!" OnClick="btnBtnAddToCart_Click" CommandArgument='<%# Eval("ID") %>' />
+
+                </div>
         </div>
     </div>
 </asp:Content>

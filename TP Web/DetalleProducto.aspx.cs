@@ -47,5 +47,25 @@ namespace TP_Web
                 sliderWrapper.Text = sb.ToString();
             }
         }
+
+        protected void btnBtnAddToCart_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            // Intento convertir el CommandArgument a un entero
+            if (int.TryParse(btn.CommandArgument, out int articuloID))
+            {
+                // Si la conversión es exitosa, almaceno el ID en la sesión
+                Session["ArticuloSeleccionado"] = articuloID;
+
+                // Redirecciono a la página de registro
+                Response.Redirect("Registro.aspx");
+            }
+            else
+            {
+
+            }
+        }
+
     }
 }
