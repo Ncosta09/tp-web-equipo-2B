@@ -12,7 +12,7 @@
             <p>Recibirás un correo con la confirmación de tu participación.</p>
 
             <div class="button-group">
-                <asp:Button ID="btnVolverInicio" runat="server" Text="Volver al Inicio" CssClass="btn btn-primary" PostBackUrl="~/Index.aspx" />
+                <asp:Button ID="btnVolverInicio" runat="server" Text="Volver al Inicio" CssClass="btn btn-primary" PostBackUrl="/" />
             </div>
         </div>
     </div>

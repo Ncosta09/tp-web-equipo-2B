@@ -5,35 +5,43 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="form-container">
-        <div class="input-group">
+    <div class="form-container-registro">
+<%--DOCUMENTO--%>
+        <div class="input-group document">
             <label for="txtDocumento">Documento</label>
-            <asp:TextBox ID="txtDocumento" runat="server" placeholder="Documento" CssClass="form-control" />
-            <asp:Button ID="btnBuscarDocumento" runat="server" CssClass="search-btn" Text="Buscar" OnClick="btnBuscarDocumento_Click" />
+            <div class="input-wrapper">
+                <asp:TextBox ID="txtDocumento" runat="server" placeholder="Documento" CssClass="form-control" />
+                <asp:Button ID="btnBuscarDocumento" runat="server" CssClass="search-btn" Text="Buscar" OnClick="btnBuscarDocumento_Click" />
+            </div>
         </div>
 
+        <%--NOMBRE Y APELLIDO--%>
         <div class="input-group">
             <label for="txtNombre">Nombre</label>
             <asp:TextBox ID="txtNombre" runat="server" placeholder="Nombre" CssClass="form-control" />
             <asp:TextBox ID="txtApellido" runat="server" placeholder="Apellido" CssClass="form-control" />
         </div>
 
+        <%--EMAIL--%>
         <div class="input-group">
             <label for="txtEmail">Email</label>
             <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control" />
         </div>
 
+        <%--DIRECCION--%>
         <div class="input-group">
             <label for="txtDireccion">Dirección</label>
             <asp:TextBox ID="txtDireccion" runat="server" placeholder="Dirección" CssClass="form-control" />
         </div>
 
+        <%--CIUDAD Y CP--%>
         <div class="input-group">
             <label for="txtCiudad">Ciudad</label>
             <asp:TextBox ID="txtCiudad" runat="server" placeholder="Ciudad" CssClass="form-control" />
             <asp:TextBox ID="txtCP" runat="server" placeholder="CP" CssClass="form-control" />
         </div>
 
+        <%--BTNS--%>
         <div class="button-group">
             <asp:Button ID="btnParticipar" runat="server" Text="Participar" CssClass="btn btn-primary" OnClick="btnParticipar_Click" Enabled="false" />
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />

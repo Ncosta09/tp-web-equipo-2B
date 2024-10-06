@@ -1,5 +1,5 @@
 ﻿.navbar {
-    height: 60px;
+    height: 6vh;
     width: 100%;
     padding: 10px 15px;
     display: flex;
@@ -38,7 +38,7 @@
 
 /*FOOTER*/
 .footer {
-    height: 40px;
+    height: 5vh;
     width: 100%;
     padding: 10px 15px;
     display: flex;
