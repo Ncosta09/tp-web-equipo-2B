@@ -86,7 +86,7 @@ namespace TP_Web
             }
         }
 
-        //  clientes nuevos
+        // Clientes nuevos
         protected void btnRegistrateParticipa_Click(object sender, EventArgs e)
         {
             if (ValidarCampos())
@@ -106,13 +106,12 @@ namespace TP_Web
                     };
 
                     RegistrarCliente clienteRegistro = new RegistrarCliente();
-                    bool clienteRegistrado = clienteRegistro.RegistrarClienteNuevo(cliente);
+                    int clienteId = clienteRegistro.RegistrarClienteNuevo(cliente); // Obtiene el Id del cliente recién registrado
 
-                    if (clienteRegistrado)
+                    if (clienteId > 0)
                     {
-
                         ParticipacionCliente participacion = new ParticipacionCliente();
-                        bool exito = participacion.GuardarParticipacion(cliente.Id, ObtenerArticuloId(), voucherCode);
+                        bool exito = participacion.GuardarParticipacion(clienteId, ObtenerArticuloId(), voucherCode);
 
                         if (exito)
                         {

@@ -73,5 +73,24 @@ namespace Negocio
             }
 
         }
+        public object ejecutarScalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                //devuelve el valor de la primera columna de la primera fila
+                //necesario para FIX registro nuevo que no matchea forenkey
+                return comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
     }
 }
