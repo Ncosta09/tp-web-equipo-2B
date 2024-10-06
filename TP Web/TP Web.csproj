@@ -120,6 +120,7 @@
     <Content Include="Content\StylesheetCliente.css" />
     <Content Include="Content\StyleSheetIndex.css" />
     <Content Include="Content\StyleSheetsProduct.css" />
+    <Content Include="Default.aspx" />
     <Content Include="DetalleProducto.aspx" />
     <Content Include="ListaProductos.aspx" />
     <Content Include="obj\Debug\TP Web.csproj.FileListAbsolute.txt" />
@@ -135,6 +136,13 @@
     <Content Include="Exito.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DetalleProducto.aspx.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

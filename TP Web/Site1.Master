@@ -28,7 +28,7 @@
                 <h1>Sorteo</h1> <%--Imagen en caso de q es guste mas--%>
             </div>
             <ul class="navbar-links">
-                <li><a runat="server" href="~/Index.aspx">Home</a></li>
+                <li><a runat="server" href="~/">Home</a></li>
                <% if (!IsPostBack)
             {
     if (Session["VoucherValido"] != null && (bool)Session["VoucherValido"]) 

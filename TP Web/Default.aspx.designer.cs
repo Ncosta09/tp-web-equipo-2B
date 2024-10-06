@@ -11,34 +11,34 @@ namespace TP_Web
 {
 
 
-    public partial class Site1
+    public partial class Default
     {
 
         /// <summary>
-        /// TitleContent control.
+        /// lblVoucher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder TitleContent;
+        protected global::System.Web.UI.WebControls.Label lblVoucher;
 
         /// <summary>
-        /// form1 control.
+        /// tbxVoucher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox tbxVoucher;
 
         /// <summary>
-        /// MainContent control.
+        /// btnVoucher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ImageButton btnVoucher;
     }
 }

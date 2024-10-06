@@ -1,9 +1,6 @@
-﻿<%--<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TP_Web.Index" %>--%>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TP_Web.Default" %>
 
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-</asp:Content>--%>
-
-<%--<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
     <section class="section-voucher">
           <div class="col-lbl">
@@ -15,4 +12,4 @@
             
           </div>
   </section>
-</asp:Content>--%>
+</asp:Content>
