@@ -50,20 +50,19 @@ namespace TP_Web
 
         protected void btnBtnAddToCart_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-
-            // Intento convertir el CommandArgument a un entero
-            if (int.TryParse(btn.CommandArgument, out int articuloID))
+            // Verifica si el ID del artículo está en la QueryString
+            if (Request.QueryString["Id"] != null)
             {
-                // Si la conversión es exitosa, almaceno el ID en la sesión
+                // Almacena el ID en la sesión
+                int articuloID = int.Parse(Request.QueryString["Id"].ToString());
                 Session["ArticuloSeleccionado"] = articuloID;
 
-                // Redirecciono a la página de registro
+                // Redirige a la página de registro
                 Response.Redirect("Registro.aspx");
             }
             else
             {
-
+                // Se podria agregar un lbl para manejo de errores
             }
         }
 
