@@ -15,7 +15,10 @@ namespace TP_Web
         {
             if (!IsPostBack)
             {
-                // Si es la primera carga de la página, no hacer nada
+                // agora sem, deshabilito los btnes para mas aestethic?
+                // Deshabilitar los botones al cargar la página
+                btnParticipar.Enabled = false;
+                btnRegistrateParticipa.Enabled = false;
             }
         }
         protected void btnBuscarDocumento_Click(object sender, EventArgs e)
@@ -177,6 +180,11 @@ namespace TP_Web
                 lblMensaje.Text = "No se ha seleccionado un artículo.";
                 return 0;
             }
+        }
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Redirige a la página ListaProductos.aspx
+            Response.Redirect("ListaProductos.aspx");
         }
     }
 }

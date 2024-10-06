@@ -44,7 +44,7 @@
         <%--BTNS--%>
         <div class="button-group">
             <asp:Button ID="btnParticipar" runat="server" Text="Participar" CssClass="btn btn-primary" OnClick="btnParticipar_Click" Enabled="false" />
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
             <asp:Button ID="btnRegistrateParticipa" runat="server" Text="Regístrate y Participa" CssClass="btn btn-register" OnClick="btnRegistrateParticipa_Click" />
         </div>
 

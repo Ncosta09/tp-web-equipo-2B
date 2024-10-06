@@ -112,3 +112,10 @@ label {
     border: 1px solid #6998AB;
     color: #1A374D;
 }
+
+button[disabled], input[type="button"][disabled], input[type="submit"][disabled] {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+    opacity: 0.6; 
+    pointer-events: none;
+}

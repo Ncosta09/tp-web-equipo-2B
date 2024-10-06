@@ -50,14 +50,14 @@ namespace TP_Web
 
         protected void btnBtnAddToCart_Click(object sender, EventArgs e)
         {
-            // Verifica si el ID del artículo está en la QueryString
+            // Verifica si esta el ID en la URL
             if (Request.QueryString["Id"] != null)
             {
-                // Almacena el ID en la sesión
+                // Me llevo el ID de la URL en SESSION
                 int articuloID = int.Parse(Request.QueryString["Id"].ToString());
                 Session["ArticuloSeleccionado"] = articuloID;
 
-                // Redirige a la página de registro
+                // Redirigo 
                 Response.Redirect("Registro.aspx");
             }
             else
