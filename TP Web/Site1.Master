@@ -31,7 +31,7 @@
                 <li><a runat="server" href="~/">Home</a></li>
                <% if (!IsPostBack)
             {
-    if (Session["VoucherValido"] != null && (bool)Session["VoucherValido"]) 
+    if ((Session["VoucherValido"] != null && (bool)Session["VoucherValido"]) && (!Request.Url.AbsolutePath.EndsWith("Exito.aspx")))
             {%>
                  <li><a runat="server" href="~/ListaProductos.aspx">Productos</a></li>      
           <%   }

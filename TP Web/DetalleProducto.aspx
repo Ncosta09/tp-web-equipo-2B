@@ -46,6 +46,7 @@
             <div class="button-container">
        
             <asp:Button CssClass="add-to-cart-btn" runat="server" Text="Quiero este!" OnClick="btnBtnAddToCart_Click" />
+                <asp:Button CssClass="add-to-cart-btn" runat="server" Text="Volver"  OnClick="btnVolver_Click" />
                 </div>
         </div>
     </div>
