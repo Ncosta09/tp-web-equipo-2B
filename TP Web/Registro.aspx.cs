@@ -6,11 +6,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Net.Mail;
+using System.Configuration;
 
 namespace TP_Web
 {
     public partial class Registro : System.Web.UI.Page
     {
+
+  
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,6 +27,8 @@ namespace TP_Web
                 btnRegistrateParticipa.Enabled = false;
             }
         }
+
+
         protected void btnBuscarDocumento_Click(object sender, EventArgs e)
         {
             string documento = txtDocumento.Text;
@@ -57,32 +65,42 @@ namespace TP_Web
         // clientes existentes
         protected void btnParticipar_Click(object sender, EventArgs e)
         {
-            try
+
+            if (ValidarCampos())
             {
-                string documento = txtDocumento.Text;
-                string voucherCode = Session["VoucherCode"].ToString();
-                ClientePorDni clientePorDni = new ClientePorDni();
-                Cliente cliente = clientePorDni.ObtenerClientePorDocumento(documento);
-
-                if (cliente != null)
+                try
                 {
-                    ParticipacionCliente participacion = new ParticipacionCliente();
-                    bool exito = participacion.GuardarParticipacion(cliente.Id, ObtenerArticuloId(), voucherCode);
 
-                    if (exito)
-                    {
+                    string documento = txtDocumento.Text;
+                    string voucherCode = Session["VoucherCode"].ToString();
+                    ClientePorDni clientePorDni = new ClientePorDni();
+                    Cliente cliente = clientePorDni.ObtenerClientePorDocumento(documento);
 
-                        Response.Redirect("Exito.aspx");
-                    }
-                    else
+                    if (cliente != null)
                     {
-                        lblMensaje.Text = "Ocurrió un error al registrar su participación.";
+                        ParticipacionCliente participacion = new ParticipacionCliente();
+                        bool exito = participacion.GuardarParticipacion(cliente.Id, ObtenerArticuloId(), voucherCode);
+
+                        if (exito)
+                        {
+                           
+                            Response.Redirect("Exito.aspx");
+                        }
+                        else
+                        {
+                            lblMensaje.Text = "Ocurrió un error al registrar su participación.";
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    lblMensaje.Text = "Error: " + ex.Message;
+                }
             }
-            catch (Exception ex)
+            else
             {
-                lblMensaje.Text = "Error: " + ex.Message;
+                string alertScript = "Swal.fire({ icon: 'error', title: 'Oops...', text: 'Por favor, complete todos los campos correctamente.'});";
+                ClientScript.RegisterStartupScript(this.GetType(), "voucherError", alertScript, true);
             }
         }
 
@@ -94,6 +112,20 @@ namespace TP_Web
                 try
                 {
                     string voucherCode = Session["VoucherCode"] as string;
+
+                    // Verificar si el cliente ya existe usando ClientePorDni
+                    RegistrarCliente clienteRegistro = new RegistrarCliente();
+                    ClientePorDni clientePorDni = new ClientePorDni();
+                    Cliente clienteExistente = clientePorDni.ObtenerClientePorDocumento(txtDocumento.Text);
+
+                    if (clienteExistente != null) // Verifica si el cliente ya existe
+                    {
+                        string alertScript = "Swal.fire({ icon: 'error', title: 'Usuario existente', text: 'El usuario ya está registrado.' });";
+                        ClientScript.RegisterStartupScript(this.GetType(), "usuarioExistente", alertScript, true);
+                        return; // Salir del método para evitar registrar de nuevo
+                    }
+
+                    // Si el cliente no existe, procede a registrarlo
                     Cliente cliente = new Cliente
                     {
                         Documento = txtDocumento.Text,
@@ -105,7 +137,6 @@ namespace TP_Web
                         CP = txtCP.Text
                     };
 
-                    RegistrarCliente clienteRegistro = new RegistrarCliente();
                     int clienteId = clienteRegistro.RegistrarClienteNuevo(cliente); // Obtiene el Id del cliente recién registrado
 
                     if (clienteId > 0)
@@ -115,6 +146,7 @@ namespace TP_Web
 
                         if (exito)
                         {
+
                             Response.Redirect("Exito.aspx");
                         }
                         else
@@ -134,9 +166,12 @@ namespace TP_Web
             }
             else
             {
-                lblMensaje.Text = "Por favor, complete todos los campos correctamente.";
+                string alertScript = "Swal.fire({ icon: 'error', title: 'Oops...', text: 'Por favor, complete todos los campos correctamente.' });";
+                ClientScript.RegisterStartupScript(this.GetType(), "voucherError", alertScript, true);
             }
         }
+
+
 
         // validar los campos 
         private bool ValidarCampos()
