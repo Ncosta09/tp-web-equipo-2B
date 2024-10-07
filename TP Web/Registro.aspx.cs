@@ -83,7 +83,11 @@ namespace TP_Web
 
                         if (exito)
                         {
+
                            
+                            EnviarCorreo(cliente.Email);
+
+                            
                             Response.Redirect("Exito.aspx");
                         }
                         else
@@ -146,21 +150,30 @@ namespace TP_Web
 
                         if (exito)
                         {
+                            // Llamar al método para enviar el correo
+                            EnviarCorreo(cliente.Email);
 
+                            // Redirigir a la página de éxito
                             Response.Redirect("Exito.aspx");
                         }
                         else
                         {
-                            lblMensaje.Text = "Ocurrió un error al registrar su participación.";
+                            string alertScript = "Swal.fire({ icon: 'error', title: 'Oops...', text: 'Ocurrió un error al registrar su participación.' });";
+                            ClientScript.RegisterStartupScript(this.GetType(), "voucherError", alertScript, true);
+                            
                         }
                     }
                     else
                     {
-                        lblMensaje.Text = "Error al registrar el cliente.";
+                        string alertScript = "Swal.fire({ icon: 'error', title: 'Oops...', text: 'Error al registrar el cliente.' });";
+                        ClientScript.RegisterStartupScript(this.GetType(), "voucherError", alertScript, true);
+                        
                     }
                 }
                 catch (Exception ex)
                 {
+                    string alertScript = "Swal.fire({ icon: 'error', title: 'Oops...', text: 'Error + ex.Message' });";
+                    ClientScript.RegisterStartupScript(this.GetType(), "voucherError", alertScript, true);
                     lblMensaje.Text = "Error: " + ex.Message;
                 }
             }
@@ -219,6 +232,32 @@ namespace TP_Web
         {
             // Redirige a la página ListaProductos.aspx
             Response.Redirect("ListaProductos.aspx");
+        }
+        // Método para enviar el correo
+        private void EnviarCorreo(string destinatario)
+        {
+            string emailRemitente = "sorteosutnfrgp@gmail.com";
+            string passwordRemitente = "vndz ynfs siso lsrq";
+
+            try
+            {
+                MailMessage correo = new MailMessage();
+                correo.From = new MailAddress(emailRemitente);
+                correo.To.Add(destinatario);  // Correo del destinatario
+                correo.Subject = "Registro Exitoso";
+                correo.Body = "Gracias por registrarte en nuestro sorteo. Tu participación ha sido exitosa.";
+                correo.IsBodyHtml = false;  // Cambia a true si deseas enviar HTML
+
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                smtp.Credentials = new NetworkCredential(emailRemitente, passwordRemitente);
+                smtp.EnableSsl = true;
+
+                smtp.Send(correo);
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = "Error al enviar correo: " + ex.Message;
+            }
         }
     }
 }
